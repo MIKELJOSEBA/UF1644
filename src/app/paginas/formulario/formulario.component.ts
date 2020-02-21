@@ -19,7 +19,7 @@ export class FormularioComponent implements OnInit {
                 this.formulario = this.builder.group({
                   titulo: ['', [Validators.required]],
                   imagen: ['', [Validators.required]],
-                  fecha: [''],
+                  fecha: ['', [Validators.required]],
                   textoCorto: ['', [Validators.required]],
                   texto: ['', [Validators.required]]
                 });
@@ -42,12 +42,7 @@ export class FormularioComponent implements OnInit {
       noticia.texto = values.texto;
       noticia.imagen = values.imagen;
 
-      const hoy = new Date();
-      const dia = String(hoy.getDate()).padStart(2, '0');
-      const mes = String(hoy.getMonth() + 1).padStart(2, '0');
-      const anio = hoy.getFullYear();
-
-      noticia.fecha = `${dia}-${mes}-${anio}`;
+      noticia.fecha = values.fecha;
 
       this.noticiasService.post(noticia).subscribe(
         dato => {

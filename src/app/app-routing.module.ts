@@ -16,11 +16,11 @@ const routes: Routes = [
 export const RUTAS = [
   {
     url: '/',
-    nombre: 'inicio'
+    nombre: 'Noticias'
   },
   {
     url: 'formulario',
-    nombre: 'formulario'
+    nombre: 'Crear noticia'
   },
 ];
 

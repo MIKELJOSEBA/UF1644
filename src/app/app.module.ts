@@ -11,6 +11,7 @@ import { FormularioComponent } from './paginas/formulario/formulario.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { NumeroElementosPipe } from './pipes/numero-elementos.pipe';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { OrdenarPorFechaPipe } from './pipes/ordenar-por-fecha.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     DetalleComponent,
     FormularioComponent,
     NavbarComponent,
-    NumeroElementosPipe
+    NumeroElementosPipe,
+    OrdenarPorFechaPipe
   ],
   imports: [
     NgbModule,

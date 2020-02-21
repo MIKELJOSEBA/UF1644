@@ -4,7 +4,7 @@
       "id": 1,
       "titulo": "Nuevo angular lanzado",
       "imagen": "https://angular.io/assets/images/logos/angular/angular.svg",
-      "fecha": "12-1-2020",
+      "fecha": "12-1-2019",
       "textoCorto": "Nuevo lanzado",
       "texto": "Hoy se ha lanzado una nueva version de angular 2020"
     },
@@ -12,7 +12,7 @@
       "id": 2,
       "titulo": "Nuevo angular lanzado 2",
       "imagen": "https://angular.io/assets/images/logos/angular/angular.svg",
-      "fecha": "13-1-2020",
+      "fecha": "13-1-2021",
       "textoCorto": "Nuevo lanzado 2",
       "texto": "Hoy se ha lanzado una nueva version de angular 2021"
     },
@@ -31,6 +31,22 @@
       "imagen": "https://cdn.eglobalcentral.com.es/images/detailed/86/xiaomi-redmi-note-8t-4gb-64gb-dual-sim-pf7axe.jpg",
       "fecha": "21-02-2020",
       "id": 4
+    },
+    {
+      "titulo": "Xiaomi anuncia MI A 199",
+      "textoCorto": "El río sonaba y agua ha llevado para Redmi, la marca independizada de Xiaomi, que acaba de presentar dos nuevos terminales de su línea Note, casi coincidien",
+      "texto": "El río sonaba y agua ha llevado para Redmi, la marca independizada de Xiaomi, que acaba de presentar dos nuevos terminales de su línea Note, casi coincidiendo con el Note de los Samsung Galaxy. Así, de los nuevos Redmi Note 8 y Redmi 8 Pro destaca éste segundo al ser el primer móvil que integra un sensor de 64 megapíxeles.  De ahí que fuese un anuncio algo más esperado de lo habitual, si bien los Redmi Note previos han sido móviles con buena relación calidad-precio y posiblemente éstos sigan siendo candidatos para quien busca la renovación si como se espera llegan a otros mercados. Por el momento se han presentado en China y han confirmado gran parte de las filtraciones que veíamos meses atrás.",
+      "imagen": "https://nolodejesescapar.com/wp-content/uploads/2019/08/Xiaomi-Redmi-Note-8-PRO-768x549.jpg",
+      "fecha": "21-02-2020",
+      "id": 5
+    },
+    {
+      "titulo": "Ha crecido un arbol",
+      "textoCorto": "a ahora, los científicos pensaban que el agua se movía a través de los árboles por ósmosis y de alguna forma esta permanecía en un",
+      "texto": "Hasta ahora, los científicos pensaban que el agua se movía a través de los árboles por ósmosis y de alguna forma esta permanecía en un continuo movimiento por el mismo.  Pero recientemente han descubierto que los troncos y las ramas de los árboles se contraen y expanden para “bombear” agua desde las raíces hasta las hojas, de manera similar a la forma en que nuestro corazón bombea sangre a través de nuestros cuerpos.  La única diferencia entre nuestro pulso y el de un árbol es que el de un árbol es mucho más lento, “latiendo” una vez cada dos horas más o menos, y en lugar de regular la presión arterial, el latido del corazón de un árbol, regula la presión del agua.",
+      "imagen": "https://ecocosas.com/wp-content/uploads/2018/06/arbol-corazon-1024x578.webp",
+      "fecha": "2018-02-19",
+      "id": 6
     }
   ],
   "posts": [
