@@ -1,9 +1,41 @@
 {
+  "noticias": [
+    {
+      "id": 1,
+      "titulo": "Nuevo angular lanzado",
+      "imagen": "https://angular.io/assets/images/logos/angular/angular.svg",
+      "fecha": "12-1-2020",
+      "textoCorto": "Nuevo lanzado",
+      "texto": "Hoy se ha lanzado una nueva version de angular 2020"
+    },
+    {
+      "id": 2,
+      "titulo": "Nuevo angular lanzado 2",
+      "imagen": "https://angular.io/assets/images/logos/angular/angular.svg",
+      "fecha": "13-1-2020",
+      "textoCorto": "Nuevo lanzado 2",
+      "texto": "Hoy se ha lanzado una nueva version de angular 2021"
+    }
+  ],
   "posts": [
     {
       "id": 1,
       "title": "json-server",
       "author": "typicode"
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "titulo": "Nuevo angular lanzado 2",
+      "imagen": "https://angular.io/assets/images/logos/angular/angular.svg",
+      "fecha": "13-1-2020",
+      "textoCorto": "Nuevo lanzado 2",
+      "texto": "Hoy se ha lanzado una nueva version de angular 2021",
+      "id": 4
     }
   ],
   "comments": [

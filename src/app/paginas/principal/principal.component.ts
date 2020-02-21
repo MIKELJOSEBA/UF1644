@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NoticiasService } from 'src/app/services/noticias.service';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-principal',
@@ -10,7 +12,7 @@ export class PrincipalComponent implements OnInit {
 
   lista: Array<any>;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private noticiasService: NoticiasService) {
     this.lista = new Array<any>();
 
   }
@@ -34,6 +36,12 @@ export class PrincipalComponent implements OnInit {
         id: 4
       },
     ];
+
+    this.noticiasService.getAll().subscribe(
+      noticias => {
+        this.lista = noticias;
+      }
+    )
   }
 
   verDetalle(libro) {

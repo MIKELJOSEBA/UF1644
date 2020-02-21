@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { NoticiasService } from 'src/app/services/noticias.service';
+import { Noticia } from 'src/app/model/noticia';
 
 
 @Component({
@@ -10,11 +12,20 @@ import { ActivatedRoute } from '@angular/router';
 export class DetalleComponent implements OnInit {
 
   id: number;
-
-  constructor(private route: ActivatedRoute) {
+  noticia: Noticia;
+  constructor(private route: ActivatedRoute, private noticiasService: NoticiasService) {
     this.id = 0;
 
-    this.route.params.subscribe(params => this.id = params.id);
+    this.route.params.subscribe(
+      params =>
+      {
+        this.id = params.id;
+        this.noticiasService.getById(this.id).subscribe(
+          noticia => {
+            this.noticia = noticia;
+          }
+        )
+      });
   }
 
   ngOnInit() {

@@ -1,3 +1,14 @@
-<p>detalle works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col border mt-4">
+      <h1>{{ noticia.titulo }} </h1>
+      <h5> Fecha: {{ noticia.fecha }}</h5>
+      <img class="imagen" src="{{ noticia.imagen }}" alt="">
 
-<h1> ID {{ id }} </h1>
+      <p>
+        {{ noticia.texto }}
+      </p>
+
+    </div>
+  </div>
+</div>
