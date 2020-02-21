@@ -12,6 +12,7 @@ export class PrincipalComponent implements OnInit {
 
   constructor(private router: Router) {
     this.lista = new Array<any>();
+
   }
 
   ngOnInit() {
