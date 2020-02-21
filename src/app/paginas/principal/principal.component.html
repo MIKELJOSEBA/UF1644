@@ -1,1 +1,11 @@
-<p>principal works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let libro of lista" (click)="verDetalle(libro)">
+          {{ libro.nombre }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
