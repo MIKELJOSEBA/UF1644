@@ -7,6 +7,8 @@ import { PrincipalComponent } from './paginas/principal/principal.component';
 import { DetalleComponent } from './paginas/detalle/detalle.component';
 import { FormularioComponent } from './paginas/formulario/formulario.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
+import { NumeroElementosPipe } from './pipes/numero-elementos.pipe';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,11 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
     PrincipalComponent,
     DetalleComponent,
     FormularioComponent,
-    NavbarComponent
+    NavbarComponent,
+    NumeroElementosPipe
   ],
   imports: [
+    NgbModule,
     BrowserModule,
     AppRoutingModule
   ],

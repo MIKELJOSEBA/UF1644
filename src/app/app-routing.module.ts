@@ -1,3 +1,5 @@
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PrincipalComponent } from './paginas/principal/principal.component';
@@ -19,7 +21,7 @@ export const RUTAS = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [ RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
