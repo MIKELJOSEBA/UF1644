@@ -1,1 +1,21 @@
-<p>formulario works!</p>
+<h1>Formulario</h1>
+<form [formGroup]="formulario" id="formularioPokemon" (ngSubmit)="enviar(formulario.value)">
+    <div class="form-group justify-content-center">
+        <label for="nombre">Id</label>
+        <input class="form-control mt-2 mb-2"
+            type="text" 
+            placeholder="Id producto" 
+            formControlName="id" disabled>
+
+        <label for="nombre">Nombre</label>
+        <input class="form-control mt-2 mb-2"
+            type="text" 
+            placeholder="nombre del producto" 
+            formControlName="nombre">
+
+        <br>
+        <input class="my-2 mt-2 btn btn-block btn-warning" 
+                                    type="submit" form="formularioPokemon" [disabled]="formulario.invalid" 
+                                    value="enviar">
+    </div>
+</form>

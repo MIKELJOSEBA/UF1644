@@ -16,6 +16,10 @@ export const RUTAS = [
     url: '/',
     nombre: 'inicio'
   },
+  {
+    url: 'formulario',
+    nombre: 'formulario'
+  },
 ];
 
 @NgModule({
