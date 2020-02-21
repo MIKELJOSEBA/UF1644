@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NoticiasService } from 'src/app/services/noticias.service';
+import { Noticia } from 'src/app/model/noticia';
 
 @Component({
   selector: 'app-formulario',
@@ -9,23 +11,51 @@ import { FormBuilder } from '@angular/forms';
 })
 export class FormularioComponent implements OnInit {
 
-  constructor(private router : Router , 
-              private builder : FormBuilder,) { 
+  formulario: FormGroup;
 
-
+  constructor(private router : Router ,
+              private builder : FormBuilder,
+              private noticiasService: NoticiasService) {
+                this.formulario = this.builder.group({
+                  titulo: ['', [Validators.required]],
+                  imagen: ['', [Validators.required]],
+                  fecha: [''],
+                  textoCorto: ['', [Validators.required]],
+                  texto: ['', [Validators.required]]
+                });
   }//constructor
 
   ngOnInit() {
 
-  }//init
+  }//ngOnInit
 
   enviar(values : any)
-    { 
+    {
       //debugger;
       console.trace('Soy el metodo enviar del formularioComponent');
       console.trace('Enviar formulario %o', values);
 
+      let noticia = new Noticia();
+      noticia.id = values.id;
+      noticia.titulo = values.titulo;
+      noticia.textoCorto = values.textoCorto;
+      noticia.texto = values.texto;
+      noticia.imagen = values.imagen;
+
+      const hoy = new Date();
+      const dia = String(hoy.getDate()).padStart(2, '0');
+      const mes = String(hoy.getMonth() + 1).padStart(2, '0');
+      const anio = hoy.getFullYear();
+
+      noticia.fecha = `${dia}-${mes}-${anio}`;
+
+      this.noticiasService.post(noticia).subscribe(
+        dato => {
+          console.debug('Vengo de hacer el post y traigo %o', dato);
+          this.router.navigate(['']);
+        }
+      )
 
   }//enviar
 
-}//class
+}//FormularioComponent

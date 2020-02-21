@@ -15,6 +15,22 @@
       "fecha": "13-1-2020",
       "textoCorto": "Nuevo lanzado 2",
       "texto": "Hoy se ha lanzado una nueva version de angular 2021"
+    },
+    {
+      "titulo": "Nuevo derrumbe en tu casa",
+      "textoCorto": "Y te ha pillado el pie",
+      "texto": "Ha ocurrido un nuevo derrumbe al lado de tu casa y te ha destrozado el pie. Robas una carta",
+      "imagen": "https://www.lavanguardia.com/r/GODO/LV/p6/WebSite/2019/09/23/Recortada/AFP_1KJ7C9_20190923124256154-411-kIkC-U475745814892kC-992x558@LaVanguardia-Web.jpg",
+      "fecha": "21-02-2020",
+      "id": 3
+    },
+    {
+      "titulo": "Xiaomi anuncia MI A 99",
+      "textoCorto": "Anuncia el nuevo movil por 400$",
+      "texto": "El que es el smartphone más esperado por parte de Redmi y que haría que el Xiaomi Mi 10 y Mi 10 Pro queden como un segundo plato para la mayoría de usuarios ya está siendo ultimado por parte de Xiaomi y Redmi. El Xiaomi Redmi K30 Pro, hermano mayor del Redmi K30 podría ver la luz mucho antes de lo esperado debido a una alta competencia en el mercado así como una mejor propuesta para el bolsillo de la mayoría de los usuarios.  El Xiaomi Redmi K30 Pro acaba de ser certificado por la unidad 3C de China. En dicha certificación encontramos que el modelo flagship de Redmi que contaría con el Snapdragon 865 llegaría acompañado de una carga a 30W de potencia como el Xiaomi Mi 10. En total se muestra que dicha carga es de 33W, pero entendemos que se trata de una carga a 30W que ya existe dentro de la firma y que seguiría los pasos del Xiaomi Mi 10 reduciendo su precio y especificaciones para poder ser un Top ventas dentro del segmento de la gama alta con especificaciones más ajustadas.",
+      "imagen": "https://cdn.eglobalcentral.com.es/images/detailed/86/xiaomi-redmi-note-8t-4gb-64gb-dual-sim-pf7axe.jpg",
+      "fecha": "21-02-2020",
+      "id": 4
     }
   ],
   "posts": [

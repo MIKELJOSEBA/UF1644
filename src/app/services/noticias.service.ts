@@ -20,7 +20,13 @@ export class NoticiasService {
 
   getById(id: number): Observable<Noticia> {
     const url = `http://localhost:3000/noticias/${id}`;
-    console.trace('GET ALL ' + url);
+    console.trace('GET BY ID ' + url);
     return this.http.get<Noticia>(url);
+  }
+
+  post(noticia: Noticia) {
+    const url = 'http://localhost:3000/noticias';
+    console.trace('GET BY ID ' + url);
+    return this.http.post(url, noticia);
   }
 } // NoticiasService
