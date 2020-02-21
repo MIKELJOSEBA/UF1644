@@ -1,11 +1,8 @@
 <h1>Formulario</h1>
 
-{{ formulario.value | json }}
-
-{{ formulario.status | json  }}
 <div class="container">
     <div class="row">
-        <div class="col-4 m-auto">
+        <div class="col-10 m-auto">
             <form [formGroup]="formulario" id="formularioPokemon" (ngSubmit)="enviar(formulario.value)">
               <!-- { "imagen": "", "titulo": "", "fecha": "", "textoCorto": "", "texto": "" }  -->
               <div class="form-group">
@@ -24,21 +21,24 @@
                 class="form-control"
                 id="imagen" placeholder="Imagen">
               </div>
+              <img class="imagen" src="{{ formulario.value.imagen }}" alt="">
               <div class="form-group">
                 <label for="textoCorto">Texto Corto</label>
-                <input
+                <textarea
                 formControlName="textoCorto"
                 type="text"
                 class="form-control"
                 id="textoCorto" placeholder="Texto Corto">
+                </textarea>
               </div>
               <div class="form-group">
                 <label for="texto">Texto</label>
-                <input
+                <textarea
                 formControlName="texto"
                 type="text"
                 class="form-control"
                 id="texto" placeholder="Texto">
+              </textarea>
               </div>
               <div class="form-group">
                 <label for="fecha">Fecha</label>
@@ -48,10 +48,10 @@
                 class="form-control"
                 id="fecha" placeholder="Fecha">
               </div>
-              <input class="my-2 mt-2 btn btn-block btn-warning"
+              <input class="my-2 mt-2 btn btn-block btn-primary"
                 type="submit"
                 form="formularioPokemon" [disabled]="formulario.invalid"
-                value="enviar">
+                value="Enviar">
             </form>
         </div>
     </div>

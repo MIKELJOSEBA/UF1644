@@ -2,6 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NoticiasService } from 'src/app/services/noticias.service';
 import { ThrowStmt } from '@angular/compiler';
+import { Noticia } from 'src/app/model/noticia';
+import { NOTICIAS } from 'src/app/mock';
+
+
+
+
 
 @Component({
   selector: 'app-principal',
@@ -10,7 +16,7 @@ import { ThrowStmt } from '@angular/compiler';
 })
 export class PrincipalComponent implements OnInit {
 
-  lista: Array<any>;
+  lista: Array<Noticia>;
 
   constructor(private router: Router, private noticiasService: NoticiasService) {
     this.lista = new Array<any>();
@@ -18,24 +24,7 @@ export class PrincipalComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.lista = [
-      {
-        nombre: 'hola',
-        id: 1
-      },
-      {
-        nombre: 'hola2',
-        id: 2
-      },
-      {
-        nombre: 'hola3',
-        id: 3
-      },
-      {
-        nombre: 'hola4',
-        id: 4
-      },
-    ];
+    this.lista = new Array<Noticia>();
 
     this.noticiasService.getAll().subscribe(
       noticias => {
@@ -49,5 +38,33 @@ export class PrincipalComponent implements OnInit {
 
     this.router.navigate(['detalle/' + libro.id]);
   }// verDetalle
+
+cargarNoticias() {
+  let noticias = NOTICIAS;
+
+  let notis = noticias.page.items.map(
+    el => {
+      let noticia = new Noticia();
+
+      noticia.titulo = el.title;
+      noticia.imagen = el.image;
+      noticia.textoCorto = el.summary;
+      noticia.texto = el.text;
+      noticia.fecha = el.publicationDate;
+
+      return noticia;
+
+
+
+    }
+  );
+
+  notis.forEach(
+    el => console.log(el)
+  )
+
+
+
+}// cargarNoticias()
 
 }
